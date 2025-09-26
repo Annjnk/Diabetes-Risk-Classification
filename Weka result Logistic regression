@@ -1,0 +1,219 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4
+Relation:     diabetes_dataset_with_notes-weka.filters.unsupervised.attribute.Remove-R17-weka.filters.unsupervised.attribute.NumericToNominal-Rlast
+Instances:    100000
+Attributes:   16
+              year
+              gender
+              age
+              location
+              race:AfricanAmerican
+              race:Asian
+              race:Caucasian
+              race:Hispanic
+              race:Other
+              hypertension
+              heart_disease
+              smoking_history
+              bmi
+              hbA1c_level
+              blood_glucose_level
+              diabetes
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Logistic Regression with ridge parameter of 1.0E-8
+Coefficients...
+                                    Class
+Variable                                0
+=========================================
+year                               0.0104
+gender=Female                     -0.1372
+gender=Male                       -0.4088
+gender=Other                     736.2517
+age                               -0.0464
+location=Alabama                  -0.1075
+location=Alaska                    0.1757
+location=Arizona                    0.255
+location=Arkansas                   0.097
+location=California                0.0012
+location=Colorado                  0.0519
+location=Connecticut               0.0846
+location=Delaware                 -0.2121
+location=District of Columbia     -0.0747
+location=Florida                   0.0221
+location=Georgia                   0.0287
+location=Guam                     -0.2931
+location=Hawaii                   -0.2153
+location=Idaho                     0.2421
+location=Illinois                 -0.2252
+location=Indiana                   -0.186
+location=Iowa                     -0.0562
+location=Kansas                   -0.2104
+location=Kentucky                  0.0111
+location=Louisiana                 0.1129
+location=Maine                    -0.0495
+location=Maryland                  -0.073
+location=Massachusetts             0.0913
+location=Michigan                  0.0067
+location=Minnesota                 0.0789
+location=Mississippi              -0.1348
+location=Missouri                  0.1147
+location=Montana                  -0.2078
+location=Nebraska                  0.0719
+location=Nevada                   -0.1844
+location=New Hampshire             0.1581
+location=New Jersey               -0.0232
+location=New Mexico               -0.0299
+location=New York                  0.2636
+location=North Carolina             0.073
+location=North Dakota               0.061
+location=Ohio                     -0.0019
+location=Oklahoma                  0.0942
+location=Oregon                    0.0323
+location=Pennsylvania              0.0363
+location=Puerto Rico              -0.0121
+location=Rhode Island             -0.1495
+location=South Carolina            -0.034
+location=South Dakota              0.0168
+location=Tennessee                -0.0196
+location=Texas                      0.028
+location=United States             0.0531
+location=Utah                      0.0737
+location=Vermont                  -0.1271
+location=Virgin Islands            0.1056
+location=Virginia                  0.1014
+location=Washington                0.0089
+location=West Virginia            -0.1742
+location=Wisconsin                 0.5731
+location=Wyoming                   0.2514
+race:AfricanAmerican              -0.0867
+race:Asian                          -0.03
+race:Caucasian                     0.0434
+race:Hispanic                     -0.0022
+race:Other                         0.0764
+hypertension                      -0.7435
+heart_disease                     -0.7375
+smoking_history=never             -0.1567
+smoking_history=not current       -0.0992
+smoking_history=current             -0.32
+smoking_history=No Info            0.4191
+smoking_history=ever               -0.268
+smoking_history=former            -0.2052
+bmi                               -0.0889
+hbA1c_level                       -2.3465
+blood_glucose_level               -0.0334
+Intercept                           6.525
+
+
+Odds Ratios...
+                                    Class
+Variable                                0
+=========================================
+year                               1.0105
+gender=Female                      0.8718
+gender=Male                        0.6644
+gender=Other                     Infinity
+age                                0.9546
+location=Alabama                   0.8981
+location=Alaska                     1.192
+location=Arizona                   1.2905
+location=Arkansas                  1.1018
+location=California                1.0012
+location=Colorado                  1.0533
+location=Connecticut               1.0883
+location=Delaware                  0.8089
+location=District of Columbia       0.928
+location=Florida                   1.0224
+location=Georgia                   1.0291
+location=Guam                       0.746
+location=Hawaii                    0.8063
+location=Idaho                      1.274
+location=Illinois                  0.7983
+location=Indiana                   0.8303
+location=Iowa                      0.9454
+location=Kansas                    0.8103
+location=Kentucky                  1.0111
+location=Louisiana                 1.1195
+location=Maine                     0.9517
+location=Maryland                  0.9296
+location=Massachusetts             1.0956
+location=Michigan                  1.0067
+location=Minnesota                 1.0821
+location=Mississippi               0.8739
+location=Missouri                  1.1215
+location=Montana                   0.8124
+location=Nebraska                  1.0745
+location=Nevada                    0.8316
+location=New Hampshire             1.1713
+location=New Jersey                0.9771
+location=New Mexico                0.9705
+location=New York                  1.3017
+location=North Carolina            1.0757
+location=North Dakota              1.0629
+location=Ohio                      0.9981
+location=Oklahoma                  1.0988
+location=Oregon                    1.0328
+location=Pennsylvania               1.037
+location=Puerto Rico                0.988
+location=Rhode Island              0.8611
+location=South Carolina            0.9665
+location=South Dakota              1.0169
+location=Tennessee                 0.9806
+location=Texas                     1.0284
+location=United States             1.0545
+location=Utah                      1.0765
+location=Vermont                   0.8806
+location=Virgin Islands            1.1113
+location=Virginia                  1.1068
+location=Washington                1.0089
+location=West Virginia             0.8401
+location=Wisconsin                 1.7737
+location=Wyoming                   1.2858
+race:AfricanAmerican               0.9169
+race:Asian                         0.9705
+race:Caucasian                     1.0444
+race:Hispanic                      0.9978
+race:Other                         1.0794
+hypertension                       0.4755
+heart_disease                      0.4783
+smoking_history=never              0.8549
+smoking_history=not current        0.9056
+smoking_history=current            0.7261
+smoking_history=No Info            1.5205
+smoking_history=ever               0.7649
+smoking_history=former             0.8145
+bmi                                0.9149
+hbA1c_level                        0.0957
+blood_glucose_level                0.9671
+
+
+Time taken to build model: 8.43 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       96035               96.035  %
+Incorrectly Classified Instances      3965                3.965  %
+Kappa statistic                          0.7089
+Mean absolute error                      0.0637
+Root mean squared error                  0.1784
+Relative absolute error                 40.9203 %
+Root relative squared error             63.9559 %
+Total Number of Instances           100000     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.991    0.370    0.966      0.991    0.979      0.719    0.962     0.996     0
+                 0.630    0.009    0.868      0.630    0.730      0.719    0.962     0.816     1
+Weighted Avg.    0.960    0.340    0.958      0.960    0.957      0.719    0.962     0.981     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 90684   816 |     a = 0
+  3149  5351 |     b = 1
+

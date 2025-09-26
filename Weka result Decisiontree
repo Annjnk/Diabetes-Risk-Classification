@@ -1,0 +1,237 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     diabetes_dataset_with_notes-weka.filters.unsupervised.attribute.Remove-R17-weka.filters.unsupervised.attribute.NumericToNominal-Rlast
+Instances:    100000
+Attributes:   16
+              year
+              gender
+              age
+              location
+              race:AfricanAmerican
+              race:Asian
+              race:Caucasian
+              race:Hispanic
+              race:Other
+              hypertension
+              heart_disease
+              smoking_history
+              bmi
+              hbA1c_level
+              blood_glucose_level
+              diabetes
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+hbA1c_level <= 6.6
+|   blood_glucose_level <= 200
+|   |   hbA1c_level <= 5: 0 (37857.0)
+|   |   hbA1c_level > 5
+|   |   |   heart_disease <= 0: 0 (54507.0/2405.0)
+|   |   |   heart_disease > 0
+|   |   |   |   blood_glucose_level <= 100: 0 (487.0)
+|   |   |   |   blood_glucose_level > 100
+|   |   |   |   |   bmi <= 30.67: 0 (1031.0/223.0)
+|   |   |   |   |   bmi > 30.67
+|   |   |   |   |   |   location = Alabama
+|   |   |   |   |   |   |   age <= 61: 0 (5.0)
+|   |   |   |   |   |   |   age > 61: 1 (3.0)
+|   |   |   |   |   |   location = Alaska
+|   |   |   |   |   |   |   year <= 2018: 0 (2.0)
+|   |   |   |   |   |   |   year > 2018: 1 (5.0/1.0)
+|   |   |   |   |   |   location = Arizona
+|   |   |   |   |   |   |   race:Other <= 0: 1 (6.0/1.0)
+|   |   |   |   |   |   |   race:Other > 0: 0 (2.0)
+|   |   |   |   |   |   location = Arkansas
+|   |   |   |   |   |   |   hypertension <= 0
+|   |   |   |   |   |   |   |   blood_glucose_level <= 158: 0 (2.0)
+|   |   |   |   |   |   |   |   blood_glucose_level > 158: 1 (5.0)
+|   |   |   |   |   |   |   hypertension > 0: 0 (4.0)
+|   |   |   |   |   |   location = California
+|   |   |   |   |   |   |   bmi <= 36.39: 0 (8.0)
+|   |   |   |   |   |   |   bmi > 36.39: 1 (4.0)
+|   |   |   |   |   |   location = Colorado
+|   |   |   |   |   |   |   race:Other <= 0: 0 (5.0/1.0)
+|   |   |   |   |   |   |   race:Other > 0: 1 (2.0)
+|   |   |   |   |   |   location = Connecticut
+|   |   |   |   |   |   |   blood_glucose_level <= 145: 1 (5.0/1.0)
+|   |   |   |   |   |   |   blood_glucose_level > 145: 0 (3.0)
+|   |   |   |   |   |   location = Delaware
+|   |   |   |   |   |   |   gender = Female
+|   |   |   |   |   |   |   |   blood_glucose_level <= 145: 0 (3.0)
+|   |   |   |   |   |   |   |   blood_glucose_level > 145: 1 (2.0)
+|   |   |   |   |   |   |   gender = Male: 1 (3.0)
+|   |   |   |   |   |   |   gender = Other: 1 (0.0)
+|   |   |   |   |   |   location = District of Columbia: 0 (6.0/2.0)
+|   |   |   |   |   |   location = Florida
+|   |   |   |   |   |   |   gender = Female: 0 (5.0/1.0)
+|   |   |   |   |   |   |   gender = Male: 1 (3.0)
+|   |   |   |   |   |   |   gender = Other: 0 (0.0)
+|   |   |   |   |   |   location = Georgia
+|   |   |   |   |   |   |   hypertension <= 0
+|   |   |   |   |   |   |   |   bmi <= 36.03: 0 (8.0)
+|   |   |   |   |   |   |   |   bmi > 36.03: 1 (3.0/1.0)
+|   |   |   |   |   |   |   hypertension > 0: 1 (4.0/1.0)
+|   |   |   |   |   |   location = Guam: 0 (3.0/1.0)
+|   |   |   |   |   |   location = Hawaii: 1 (9.0/2.0)
+|   |   |   |   |   |   location = Idaho: 0 (10.0/1.0)
+|   |   |   |   |   |   location = Illinois
+|   |   |   |   |   |   |   hypertension <= 0
+|   |   |   |   |   |   |   |   bmi <= 33: 1 (3.0)
+|   |   |   |   |   |   |   |   bmi > 33: 0 (3.0)
+|   |   |   |   |   |   |   hypertension > 0: 1 (3.0)
+|   |   |   |   |   |   location = Indiana
+|   |   |   |   |   |   |   age <= 63: 1 (2.0)
+|   |   |   |   |   |   |   age > 63: 0 (2.0)
+|   |   |   |   |   |   location = Iowa
+|   |   |   |   |   |   |   age <= 67: 0 (6.0/1.0)
+|   |   |   |   |   |   |   age > 67: 1 (5.0)
+|   |   |   |   |   |   location = Kansas: 1 (8.0/3.0)
+|   |   |   |   |   |   location = Kentucky
+|   |   |   |   |   |   |   race:Other <= 0
+|   |   |   |   |   |   |   |   bmi <= 33.6: 0 (5.0/1.0)
+|   |   |   |   |   |   |   |   bmi > 33.6: 1 (5.0)
+|   |   |   |   |   |   |   race:Other > 0: 0 (3.0)
+|   |   |   |   |   |   location = Louisiana
+|   |   |   |   |   |   |   hbA1c_level <= 6: 1 (6.0/2.0)
+|   |   |   |   |   |   |   hbA1c_level > 6: 0 (8.0/1.0)
+|   |   |   |   |   |   location = Maine
+|   |   |   |   |   |   |   smoking_history = never: 0 (2.0)
+|   |   |   |   |   |   |   smoking_history = not current: 0 (0.0)
+|   |   |   |   |   |   |   smoking_history = current: 0 (1.0)
+|   |   |   |   |   |   |   smoking_history = No Info: 1 (1.0)
+|   |   |   |   |   |   |   smoking_history = ever: 0 (1.0)
+|   |   |   |   |   |   |   smoking_history = former: 1 (5.0/1.0)
+|   |   |   |   |   |   location = Maryland
+|   |   |   |   |   |   |   age <= 64: 0 (2.0)
+|   |   |   |   |   |   |   age > 64: 1 (2.0)
+|   |   |   |   |   |   location = Massachusetts
+|   |   |   |   |   |   |   race:Hispanic <= 0
+|   |   |   |   |   |   |   |   blood_glucose_level <= 159: 0 (11.0)
+|   |   |   |   |   |   |   |   blood_glucose_level > 159: 1 (3.0/1.0)
+|   |   |   |   |   |   |   race:Hispanic > 0: 1 (2.0)
+|   |   |   |   |   |   location = Michigan
+|   |   |   |   |   |   |   race:AfricanAmerican <= 0
+|   |   |   |   |   |   |   |   race:Other <= 0
+|   |   |   |   |   |   |   |   |   bmi <= 32.76: 1 (2.0)
+|   |   |   |   |   |   |   |   |   bmi > 32.76: 0 (3.0)
+|   |   |   |   |   |   |   |   race:Other > 0: 1 (2.0)
+|   |   |   |   |   |   |   race:AfricanAmerican > 0: 1 (2.0)
+|   |   |   |   |   |   location = Minnesota: 1 (6.0/1.0)
+|   |   |   |   |   |   location = Mississippi: 0 (6.0)
+|   |   |   |   |   |   location = Missouri
+|   |   |   |   |   |   |   hypertension <= 0
+|   |   |   |   |   |   |   |   blood_glucose_level <= 155: 1 (2.0)
+|   |   |   |   |   |   |   |   blood_glucose_level > 155: 0 (2.0)
+|   |   |   |   |   |   |   hypertension > 0: 0 (5.0)
+|   |   |   |   |   |   location = Montana
+|   |   |   |   |   |   |   age <= 62: 1 (5.0/1.0)
+|   |   |   |   |   |   |   age > 62: 0 (8.0)
+|   |   |   |   |   |   location = Nebraska
+|   |   |   |   |   |   |   hypertension <= 0: 0 (5.0/1.0)
+|   |   |   |   |   |   |   hypertension > 0: 1 (3.0)
+|   |   |   |   |   |   location = Nevada
+|   |   |   |   |   |   |   hypertension <= 0: 0 (8.0/1.0)
+|   |   |   |   |   |   |   hypertension > 0: 1 (3.0/1.0)
+|   |   |   |   |   |   location = New Hampshire
+|   |   |   |   |   |   |   bmi <= 32.82: 0 (3.0)
+|   |   |   |   |   |   |   bmi > 32.82: 1 (4.0)
+|   |   |   |   |   |   location = New Jersey
+|   |   |   |   |   |   |   gender = Female: 0 (5.0)
+|   |   |   |   |   |   |   gender = Male
+|   |   |   |   |   |   |   |   hbA1c_level <= 5.8: 0 (2.0)
+|   |   |   |   |   |   |   |   hbA1c_level > 5.8: 1 (4.0)
+|   |   |   |   |   |   |   gender = Other: 0 (0.0)
+|   |   |   |   |   |   location = New Mexico
+|   |   |   |   |   |   |   race:Asian <= 0
+|   |   |   |   |   |   |   |   age <= 69: 0 (2.0)
+|   |   |   |   |   |   |   |   age > 69: 1 (3.0)
+|   |   |   |   |   |   |   race:Asian > 0: 0 (2.0)
+|   |   |   |   |   |   location = New York: 0 (11.0/4.0)
+|   |   |   |   |   |   location = North Carolina
+|   |   |   |   |   |   |   race:Hispanic <= 0: 1 (3.0)
+|   |   |   |   |   |   |   race:Hispanic > 0: 0 (2.0)
+|   |   |   |   |   |   location = North Dakota
+|   |   |   |   |   |   |   bmi <= 33.24: 0 (2.0)
+|   |   |   |   |   |   |   bmi > 33.24: 1 (3.0)
+|   |   |   |   |   |   location = Ohio
+|   |   |   |   |   |   |   bmi <= 40.67: 0 (4.0)
+|   |   |   |   |   |   |   bmi > 40.67: 1 (2.0)
+|   |   |   |   |   |   location = Oklahoma: 0 (6.0/1.0)
+|   |   |   |   |   |   location = Oregon
+|   |   |   |   |   |   |   race:Asian <= 0
+|   |   |   |   |   |   |   |   gender = Female: 0 (2.0)
+|   |   |   |   |   |   |   |   gender = Male
+|   |   |   |   |   |   |   |   |   hypertension <= 0: 0 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   hypertension > 0: 1 (4.0)
+|   |   |   |   |   |   |   |   gender = Other: 1 (0.0)
+|   |   |   |   |   |   |   race:Asian > 0: 1 (3.0)
+|   |   |   |   |   |   location = Pennsylvania
+|   |   |   |   |   |   |   race:Caucasian <= 0: 1 (6.0/1.0)
+|   |   |   |   |   |   |   race:Caucasian > 0: 0 (2.0)
+|   |   |   |   |   |   location = Puerto Rico: 0 (10.0/3.0)
+|   |   |   |   |   |   location = Rhode Island: 0 (11.0/3.0)
+|   |   |   |   |   |   location = South Carolina
+|   |   |   |   |   |   |   age <= 68: 0 (4.0/1.0)
+|   |   |   |   |   |   |   age > 68: 1 (3.0)
+|   |   |   |   |   |   location = South Dakota
+|   |   |   |   |   |   |   race:Caucasian <= 0: 1 (5.0/1.0)
+|   |   |   |   |   |   |   race:Caucasian > 0: 0 (3.0)
+|   |   |   |   |   |   location = Tennessee
+|   |   |   |   |   |   |   race:Caucasian <= 0: 0 (6.0/1.0)
+|   |   |   |   |   |   |   race:Caucasian > 0: 1 (2.0)
+|   |   |   |   |   |   location = Texas: 0 (6.0/1.0)
+|   |   |   |   |   |   location = United States
+|   |   |   |   |   |   |   age <= 64: 1 (2.0)
+|   |   |   |   |   |   |   age > 64: 0 (2.0)
+|   |   |   |   |   |   location = Utah
+|   |   |   |   |   |   |   age <= 64: 0 (6.0)
+|   |   |   |   |   |   |   age > 64: 1 (4.0/1.0)
+|   |   |   |   |   |   location = Vermont: 0 (4.0/1.0)
+|   |   |   |   |   |   location = Virgin Islands: 0 (3.0/1.0)
+|   |   |   |   |   |   location = Virginia
+|   |   |   |   |   |   |   race:Other <= 0: 1 (2.0)
+|   |   |   |   |   |   |   race:Other > 0: 0 (2.0)
+|   |   |   |   |   |   location = Washington: 0 (4.0/2.0)
+|   |   |   |   |   |   location = West Virginia: 0 (2.0/1.0)
+|   |   |   |   |   |   location = Wisconsin: 0 (0.0)
+|   |   |   |   |   |   location = Wyoming: 0 (1.0)
+|   blood_glucose_level > 200: 1 (1792.0)
+hbA1c_level > 6.6: 1 (3895.0)
+
+Number of Leaves  : 	119
+
+Size of the tree : 	176
+
+
+Time taken to build model: 4.8 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       97166               97.166  %
+Incorrectly Classified Instances      2834                2.834  %
+Kappa statistic                          0.7862
+Mean absolute error                      0.0538
+Root mean squared error                  0.1648
+Relative absolute error                 34.5785 %
+Root relative squared error             59.1103 %
+Total Number of Instances           100000     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.330    0.970      1.000    0.985      0.804    0.862     0.978     0
+                 0.670    0.000    0.994      0.670    0.801      0.804    0.862     0.743     1
+Weighted Avg.    0.972    0.302    0.972      0.972    0.969      0.804    0.862     0.958     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 91467    33 |     a = 0
+  2801  5699 |     b = 1
+
